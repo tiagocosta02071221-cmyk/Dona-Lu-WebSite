@@ -50,3 +50,13 @@ Criar uma presença digital profissional para a Dona Lu, valorizando seus produt
 Projeto desenvolvido pela **EventHorizon-Web**.
 
 > Building digital experiences for businesses.
+
+## Related Projects
+
+This website is part of **EventHorizon-Web**, our web development initiative focused on creating digital experiences for businesses and professionals.
+
+**[EventHorizon-Web](https://github.com/EventHorizon-ia/EventHorizon-Web)**
+
+---
+
+*From ideas to digital experiences.*
