@@ -1,62 +1,52 @@
 # Dona Lu
 
-> Site institucional para a Dona Lu, apresentando produtos de comida caseira e facilitando encomendas pelo WhatsApp.
+> Institutional website for Dona Lu, showcasing homemade food products and making orders easier through WhatsApp.
 
-## 🌐 Projeto
+## 🌐 Project
 
-Site desenvolvido para apresentar o trabalho da Dona Lu, destacando seus produtos artesanais, cardápio e informações para encomendas.
+A website developed to showcase Dona Lu's homemade food business, highlighting its products, menu, and ordering information.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- Apresentação da marca e dos produtos
-- Cardápio organizado por categorias
-- Fotos dos produtos
-- Informações de preços e tamanhos
-- Seção sobre o negócio
-- Botões de encomenda pelo WhatsApp
-- Design responsivo para desktop e mobile
-- Navegação com rolagem suave
-- Interface focada em uma experiência simples e agradável
+- Brand and product presentation
+- Menu organized by categories
+- Product photography
+- Product descriptions, prices, and sizes
+- About section
+- WhatsApp ordering integration
+- Responsive design for desktop and mobile devices
+- Smooth scrolling navigation
+- User-friendly interface
 
-## 🍽️ Produtos
+## 🍽️ Products
 
-O cardápio inclui produtos como:
+The menu includes products such as:
 
 - Nhoc Dona Lu
-- Nhoc com Molho
-- Empadas Dona Lu
-- Outros produtos que serão adicionados futuramente
+- Nhoc with Sauce
+- Dona Lu Homemade Pies
+- Additional products to be added in the future
 
-O cardápio foi estruturado para permitir a inclusão de novos produtos, imagens, descrições e preços.
+The menu structure allows new products, images, descriptions, and prices to be added easily.
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
 - HTML
 - CSS
 - JavaScript
 
-## 📱 Contato
+## 📱 Contact
 
-As encomendas são realizadas diretamente pelo WhatsApp:
+Orders are placed directly through WhatsApp:
 
-**(14) 99783-6322**
+**+55 (14) 99783-6322**
 
-## 🎯 Objetivo
+## 🎯 Purpose
 
-Criar uma presença digital profissional para a Dona Lu, valorizando seus produtos e facilitando o contato com clientes e a realização de encomendas.
+To establish a professional online presence for Dona Lu, showcase the quality of her homemade products, and make it easier for customers to discover products and place orders.
 
-## 🚀 Desenvolvimento
+## 🚀 Development
 
-Projeto desenvolvido pela **EventHorizon-Web**.
+Developed by **EventHorizon-Web**.
 
 > Building digital experiences for businesses.
-
-## Related Projects
-
-This website is part of **EventHorizon-Web**, our web development initiative focused on creating digital experiences for businesses and professionals.
-
-**[EventHorizon-Web](https://github.com/EventHorizon-ia/EventHorizon-Web)**
-
----
-
-*From ideas to digital experiences.*
