@@ -50,3 +50,13 @@ To establish a professional online presence for Dona Lu, showcase the quality of
 Developed by **EventHorizon-Web**.
 
 > Building digital experiences for businesses.
+
+## Related Projects
+
+This website is part of **EventHorizon-Web**, our web development initiative focused on creating digital experiences for businesses and professionals.
+
+**[EventHorizon-Web](https://github.com/EventHorizon-ia/EventHorizon-Web)**
+
+---
+
+*From ideas to digital experiences.*
