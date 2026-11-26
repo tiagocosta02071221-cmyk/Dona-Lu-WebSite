@@ -40,7 +40,10 @@
   --radius-md: 10px;
   --radius-lg: 14px;
 
-  --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-image: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.36s var(--ease-smooth);
+  --transition-img: 0.85s var(--ease-image);
 }
 
 /* Reset & Base */
@@ -144,6 +147,8 @@ button {
 
 /* Botões */
 .btn {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -153,16 +158,36 @@ button {
   font-weight: 600;
   border-radius: var(--radius-sm);
   border: 1.5px solid transparent;
-  transition: transform var(--transition), background-color var(--transition),
-    border-color var(--transition), box-shadow var(--transition), color var(--transition);
+  transition: transform 0.38s var(--ease-smooth), background-color 0.38s var(--ease-smooth),
+    border-color 0.38s var(--ease-smooth), box-shadow 0.38s var(--ease-smooth),
+    color 0.38s var(--ease-smooth);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.16) 50%,
+    transparent 80%
+  );
+  transform: translateX(-110%);
+  transition: transform 0.75s var(--ease-smooth);
+  pointer-events: none;
 }
 
 .btn:hover {
   transform: translateY(-2px);
 }
 
+.btn:hover::before {
+  transform: translateX(110%);
+}
+
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.985);
 }
 
 .btn-sm {
@@ -487,11 +512,13 @@ button {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  will-change: transform;
+  transition: transform var(--transition-img), filter var(--transition-img);
 }
 
 .hero-image-frame:hover .hero-image {
-  transform: scale(1.03);
+  transform: scale(1.045);
+  filter: brightness(1.03);
 }
 
 .hero-badge {
@@ -504,6 +531,12 @@ button {
   padding: 0.8rem 1.15rem;
   border-radius: var(--radius-sm);
   border-left: 3px solid var(--gold-500);
+  transition: transform 0.45s var(--ease-smooth), background-color 0.45s var(--ease-smooth);
+}
+
+.hero-image-frame:hover .hero-badge {
+  transform: translateY(-3px);
+  background-color: rgba(42, 23, 14, 0.96);
 }
 
 .hero-badge-title {
@@ -540,6 +573,12 @@ button {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-subtle);
+  transition: transform var(--transition-img), box-shadow var(--transition);
+}
+
+.about-image-stack:hover .about-img-main {
+  transform: scale(1.025);
+  box-shadow: var(--shadow-lg);
 }
 
 .about-seal {
@@ -553,6 +592,11 @@ button {
   padding: 5px;
   box-shadow: var(--shadow-md);
   border: 1.5px solid var(--gold-500);
+  transition: transform 0.55s var(--ease-smooth);
+}
+
+.about-image-stack:hover .about-seal {
+  transform: scale(1.05) rotate(3deg);
 }
 
 .about-seal img {
@@ -705,13 +749,14 @@ button {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform 0.48s var(--ease-smooth), box-shadow 0.48s var(--ease-smooth),
+    border-color 0.48s var(--ease-smooth);
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(200, 146, 58, 0.45);
+  border-color: rgba(200, 146, 58, 0.48);
 }
 
 .product-media {
@@ -720,15 +765,31 @@ button {
   background-color: var(--cream-200);
 }
 
+.product-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42, 23, 14, 0.22) 0%, transparent 45%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-smooth);
+  pointer-events: none;
+}
+
+.product-card:hover .product-media::after {
+  opacity: 1;
+}
+
 .product-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  will-change: transform;
+  transition: transform var(--transition-img), filter var(--transition-img);
 }
 
 .product-card:hover .product-image {
-  transform: scale(1.04);
+  transform: scale(1.06);
+  filter: brightness(1.03);
 }
 
 .product-badge {
@@ -860,12 +921,14 @@ button {
   border-radius: var(--radius-md);
   padding: 1.85rem 1.5rem;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.45s var(--ease-smooth), box-shadow 0.45s var(--ease-smooth),
+    border-color 0.45s var(--ease-smooth);
 }
 
 .feature-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: rgba(200, 146, 58, 0.4);
 }
 
 .feature-icon {
@@ -878,6 +941,14 @@ button {
   color: var(--wine-600);
   border-radius: var(--radius-sm);
   margin-bottom: 1.2rem;
+  transition: transform 0.45s var(--ease-smooth), background-color 0.45s var(--ease-smooth),
+    color 0.45s var(--ease-smooth);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.08);
+  background-color: var(--wine-600);
+  color: var(--white);
 }
 
 .feature-icon svg {
@@ -980,6 +1051,12 @@ button {
   border-radius: 50%;
   border: 3px solid var(--gold-500);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.7s var(--ease-image), box-shadow 0.7s var(--ease-image);
+}
+
+.contact-logo:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
 }
 
 /* ==========================================================================
@@ -1071,29 +1148,54 @@ button {
   border: 1.5px solid var(--gold-400);
   font-weight: 600;
   font-size: 0.9rem;
-  transition: transform var(--transition), background-color var(--transition);
+  transition: transform 0.4s var(--ease-smooth), background-color 0.35s var(--ease-smooth),
+    box-shadow 0.4s var(--ease-smooth);
 }
 
 .whatsapp-float:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.02);
   background-color: var(--wine-700);
 }
 
 .whatsapp-float svg {
   width: 20px;
   height: 20px;
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.whatsapp-float:hover svg {
+  transform: rotate(-8deg) scale(1.08);
 }
 
 /* Animação discreta de entrada */
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(22px);
+  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ==========================================================================

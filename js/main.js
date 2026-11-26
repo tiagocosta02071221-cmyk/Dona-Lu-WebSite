@@ -59,7 +59,7 @@
           : "";
 
         const itemsHtml = cat.itens
-          .map((item) => {
+          .map((item, idx) => {
             const badgeHtml = item.badge
               ? `<span class="product-badge">${item.badge}</span>`
               : "";
@@ -78,7 +78,7 @@
             const whatsappLink = buildWhatsAppUrl(item.mensagemWhatsapp);
 
             return `
-              <article class="product-card">
+              <article class="product-card reveal" style="--reveal-delay: ${idx * 80}ms;">
                 <div class="product-media">
                   <img
                     src="${item.imagem}"
@@ -142,6 +142,8 @@
         `;
       })
       .join("");
+
+    setupRevealAnimations();
   }
 
   // Menu mobile drawer
@@ -198,7 +200,9 @@
 
   // Animação discreta ao entrar na tela
   function setupRevealAnimations() {
-    const elements = document.querySelectorAll(".reveal");
+    const elements = document.querySelectorAll(".reveal:not(.visible)");
+    if (!elements.length) return;
+
     if (!("IntersectionObserver" in window)) {
       elements.forEach((el) => el.classList.add("visible"));
       return;
