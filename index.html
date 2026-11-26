@@ -1,101 +1,410 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dona Lu · Comida caseira, massas artesanais e sobremesas</title>
-<meta name="description" content="Empadas, nhoc e sobremesas caseiras feitas com carinho. Encomende pelo WhatsApp.">
-<link rel="icon" href="img/favicon.png" type="image/png" sizes="512x512">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&family=Kaushan+Script&family=Nunito:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dona Lu — Comida Caseira, Massas Artesanais e Empadas</title>
+  <meta
+    name="description"
+    content="Dona Lu: nhoc caseiro fresquinho ou congelado, nhoc com molho aos domingos, empadas artesanais de massa amanteigada e sobremesas. Encomende pelo WhatsApp (14) 99783-6322."
+  />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header><div class="wrap bar">
-<a class="logo" href="#inicio">Dona Lu</a>
-<nav><a href="#produtos">Cardápio</a><a href="#sobre">Nossa casa</a><a href="#encomendar">Como encomendar</a>
-<a class="btn btn-gold" data-wa>WhatsApp</a></nav></div></header>
+  <!-- Cabeçalho / Navegação -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Dona Lu — Voltar ao início">
+        <img src="img/favicon.png" alt="Logo Dona Lu" class="brand-logo" width="48" height="48" />
+        <div class="brand-text">
+          <span class="brand-name">Dona Lu</span>
+          <span class="brand-tagline">Comida Caseira &amp; Artesanal</span>
+        </div>
+      </a>
 
-<main>
-<section class="hero" id="inicio" style="padding-bottom:0">
-<div class="wrap hero-grid">
-<div>
-<p class="eyebrow">Comida caseira · Massas artesanais</p>
-<h1>Dona Lu</h1>
-<p class="lead">Empadas que desmancham na boca, nhoc de domingo e sobremesas com gostinho de casa. <em>Da minha casa pra sua mesa!</em></p>
-<div class="cta"><a class="btn btn-gold" data-wa><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Fazer minha encomenda</a><a class="btn btn-line" href="#produtos">Ver o cardápio</a></div>
-<ul class="chips"><li>Ingredientes selecionados</li><li>Sem conservantes</li><li>Feito com muito carinho</li></ul>
-</div>
-<figure class="hero-img"><img src="img/hero.jpg" alt="Empada dourada partida ao meio, com recheio de frango desfiado"><figcaption class="selo">Da minha casa<br>pra sua mesa</figcaption></figure>
-</div>
-<div class="xadrez"></div>
-</section>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+          <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
 
-<section class="sobre" id="sobre"><div class="wrap">
-<div class="head"><p class="eyebrow">Nossa casa, sua mesa</p><h2>Sabor de comida feita em casa</h2><p>Aqui a massa é amanteigada, o recheio é generoso e cada receita leva o carinho de quem cozinha para a própria família.</p></div>
-<div class="trio">
-<div><span>🌿</span><b>Ingredientes selecionados</b><p>Escolhidos um a um, para o sabor aparecer em cada mordida.</p></div>
-<div><span>🤍</span><b>Sem conservantes</b><p>Comida de verdade, como a gente faz na cozinha de casa.</p></div>
-<div><span>🏠</span><b>Feito com muito carinho</b><p>Tradição, capricho e acabamento artesanal em tudo que sai daqui.</p></div>
-</div></div></section>
+      <div class="header-actions">
+        <a
+          href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-wine btn-sm"
+        >
+          Encomendar
+        </a>
+        <button
+          type="button"
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobileDrawer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
 
-<section id="produtos"><div class="wrap">
-<div class="head"><p class="eyebrow">Cardápio</p><h2>Escolha o seu favorito</h2><p>Todos os produtos são sob encomenda pelo WhatsApp.</p></div>
+    <!-- Menu Mobile -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav aria-label="Navegação móvel">
+        <ul class="mobile-nav-list">
+          <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+          <li><a href="#sobre" class="mobile-nav-link">Sobre a Dona Lu</a></li>
+          <li><a href="#cardapio" class="mobile-nav-link">Cardápio</a></li>
+          <li><a href="#diferenciais" class="mobile-nav-link">Diferenciais</a></li>
+          <li><a href="#contato" class="mobile-nav-link">Contato e Encomendas</a></li>
+        </ul>
+        <a
+          href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-wine btn-full"
+        >
+          Fazer encomenda no WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
 
-<div class="sub"><h3>Empadas</h3></div>
-<p class="head" style="margin-top:-12px"><span class="script" style="font:400 1.5rem var(--script);color:var(--accent)">Aquela que desmancha na boca!</span></p>
-<div class="grid">
-<article class="card"><img src="img/frango.jpg" alt="Empada de frango desfiado" loading="lazy"><div class="in"><h3>Frango</h3><p>Frango desfiado e temperadinho, na massa amanteigada.</p>
-<ul class="price"><li><span>1 kg</span><b>R$ 45,00</b></li><li><span>1,5 kg</span><b>R$ 67,50</b></li></ul>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de encomendar empadas de frango.">Encomendar</a></div></article>
-<article class="card"><img src="img/palmito.jpg" alt="Empada de palmito com recheio cremoso" loading="lazy"><div class="in"><h3>Palmito</h3><p>Recheio cremoso de palmito com ervas, bem macio.</p>
-<ul class="price"><li><span>1 kg</span><b>R$ 60,00</b></li><li><span>1,5 kg</span><b>R$ 90,00</b></li></ul>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de encomendar empadas de palmito.">Encomendar</a></div></article>
-<article class="card"><img src="img/suprema.jpg" alt="Empada suprema com mussarela, presunto e bacon" loading="lazy"><div class="in"><span class="tag">Suprema</span><h3>Mussarela, presunto e bacon</h3><p>Queijo derretido, presunto e bacon: a mais recheada.</p>
-<ul class="price"><li><span>1 kg</span><b>R$ 60,00</b></li><li><span>1,5 kg</span><b>R$ 90,00</b></li></ul>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de encomendar empadas supremas.">Encomendar</a></div></article>
-</div>
-<p class="note">Temos também outras opções de tamanho!</p>
+  <main>
+    <!-- INÍCIO (HERO) -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Da minha casa pra sua mesa</span>
+          <h1 class="hero-title">Dona Lu</h1>
+          <p class="hero-subtitle">
+            O sabor genuíno da comida caseira, preparada artesanalmente com dedicação e carinho para tornar cada refeição em família ainda mais especial.
+          </p>
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn btn-primary">Conheça nosso cardápio</a>
+            <a
+              href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-wine"
+            >
+              Faça sua encomenda
+            </a>
+          </div>
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              <span class="highlight-dot"></span>
+              <span>Massas artesanais</span>
+            </div>
+            <div class="hero-highlight-item">
+              <span class="highlight-dot"></span>
+              <span>Empadas amanteigadas</span>
+            </div>
+            <div class="hero-highlight-item">
+              <span class="highlight-dot"></span>
+              <span>Sem conservantes</span>
+            </div>
+          </div>
+        </div>
 
-<div class="sub"><h3>Nhoc</h3></div>
-<div class="grid nhoc-grid">
-<article class="card"><img src="img/nhoc-fresco.png" alt="Nhoc fresquinho" loading="lazy"><div class="in"><span class="tag gold">Fresquinho</span><h3>Nhoc fresquinho</h3><p>Macio, feito para ir direto à panela.</p>
-<ul class="price"><li><span>1 kg</span><b>R$ 25,00</b></li><li><span>1,5 kg</span><b>R$ 37,50</b></li></ul>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de encomendar nhoc fresquinho.">Encomendar</a></div></article>
-<article class="card"><img src="img/nhoc-congelado.png" alt="Nhoc congelado em embalagem" loading="lazy"><div class="in"><span class="tag gold">Congelado</span><h3>Nhoc congelado</h3><p>Fica guardado no freezer, pronto para quando bater a vontade.</p>
-<ul class="price"><li><span>1 kg</span><b>R$ 25,00</b></li><li><span>1,5 kg</span><b>R$ 37,50</b></li></ul>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de encomendar nhoc congelado.">Encomendar</a></div></article>
-<article class="card wide"><div class="pics"><img src="img/nhoc-bolonhesa.png" alt="Molho bolonhesa" loading="lazy"><img src="img/nhoc-toscana.png" alt="Molho toscana com azeitona" loading="lazy"></div>
-<div class="in"><span class="tag">Somente aos domingos, sob encomenda</span><h3>Nhoc com molho</h3><p>Escolha o seu sabor: <b>Bolonhesa</b> ou <b>Toscana com azeitona</b>.</p>
-<ul class="price"><li><span>1 kg</span><b>R$ 60,00</b></li></ul>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de encomendar nhoc com molho para domingo.">Encomendar para domingo</a></div></article>
-</div>
+        <div class="hero-media reveal">
+          <div class="hero-image-frame">
+            <img
+              src="img/hero.jpg"
+              alt="Empada artesanal Dona Lu dourada e bem recheada"
+              class="hero-image"
+            />
+            <div class="hero-badge">
+              <span class="hero-badge-title">Feito com carinho</span>
+              <span class="hero-badge-sub">Receitas caseiras sob encomenda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="sub"><h3>Sobremesas</h3></div>
-<article class="feat"><img src="img/manjar.jpg" alt="Manjar de coco com calda de ameixa em travessa de vidro" loading="lazy">
-<div class="in"><span class="tag gold">Clássico caseiro</span><h2 style="font-size:2rem">Manjar de coco</h2><p style="margin:0;color:var(--muted)">Cremoso, leve e irresistível, com calda de ameixa. Uma sobremesa clássica, com todo o sabor caseiro da Dona Lu.</p>
-<p style="margin:0;font-weight:700;color:var(--accent)">R$ 60,00</p>
-<a class="btn btn-wine" data-wa="Olá, Dona Lu! Gostaria de saber valores e tamanhos do manjar de coco.">Perguntar no WhatsApp</a></div></article>
-</div></section>
+    <!-- SOBRE A DONA LU -->
+    <section class="section section-cream" id="sobre">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-image-stack">
+            <img
+              src="img/fresco.jpg"
+              alt="Nhoc caseiro fresco Dona Lu preparado artesanalmente"
+              class="about-img-main"
+              loading="lazy"
+            />
+            <div class="about-seal">
+              <img src="img/favicon.png" alt="Selo Dona Lu" width="96" height="96" loading="lazy" />
+            </div>
+          </div>
+        </div>
 
-<section class="passos" id="encomendar"><div class="wrap">
-<div class="head"><p class="eyebrow">Simples e rápido</p><h2>Como encomendar</h2></div>
-<div class="steps">
-<div><b>Escolha</b><p>Veja o cardápio e decida o sabor e o tamanho.</p></div>
-<div><b>Chame no WhatsApp</b><p>Toque em qualquer botão “Encomendar”: a mensagem já vai pronta.</p></div>
-<div><b>Combine os detalhes</b><p>Confirme quantidade, data e a forma de receber.</p></div>
-</div></div></section>
+        <div class="about-content reveal">
+          <span class="eyebrow">Sobre a Dona Lu</span>
+          <h2 class="section-title">Cuidado artesanal em cada receita</h2>
+          <p class="about-lead">
+            Na Dona Lu, cada massa, empada e molho nasce da dedicação no preparo e do carinho em cada detalhe — com a proposta simples e verdadeira de levar comida caseira de qualidade para a mesa dos nossos clientes.
+          </p>
+          <p class="about-text">
+            Valorizamos o tempo certo de cada receita, ingredientes selecionados e o sabor acolhedor de quem cozinha pensando em reunir pessoas queridas ao redor da mesa.
+          </p>
 
-<section class="final"><div class="wrap">
-<h2>Pronto para sentir o <span>sabor de casa?</span></h2>
-<a class="fone" data-wa>(14) 99783-6322</a>
-<a class="btn btn-gold" data-wa><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Fazer encomenda pelo WhatsApp</a></div>
-<div class="xadrez"></div></section>
-</main>
+          <!-- Espaço reservado para futura ampliação da história do negócio -->
+          <div class="story-placeholder">
+            <span class="story-placeholder-label">Nossa trajetória</span>
+            <p class="story-placeholder-text">
+              Espaço reservado para compartilhar em breve mais detalhes sobre a história da Dona Lu.
+            </p>
+          </div>
 
-<footer><b>Dona Lu</b><br>Da minha casa pra sua mesa · Comida caseira, massas artesanais e sobremesas<br><small>Desenvolvido por EventHorizon Web</small></footer>
+          <div class="about-cta">
+            <a
+              href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-wine"
+            >
+              Falar com a Dona Lu
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a class="fab" data-wa aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24"><use href="#wa"/></svg></a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></symbol></svg>
-<script src="main.js"></script>
+    <!-- CARDÁPIO (DINÂMICO E EXPANSÍVEL) -->
+    <section class="section section-light" id="cardapio">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="eyebrow">Nosso Cardápio</span>
+          <h2 class="section-title">Sabores feitos com carinho</h2>
+          <p class="section-subtitle">
+            Explore nossas opções de nhoc caseiro, molhos especiais, empadas amanteigadas e sobremesas. Escolha seus favoritos e faça sua encomenda direto pelo WhatsApp.
+          </p>
+        </header>
+
+        <!-- Barra de filtros por categoria (gerada dinamicamente via JS) -->
+        <div class="menu-filters reveal" id="menuFilters" role="tablist" aria-label="Filtrar categorias do cardápio"></div>
+
+        <!-- Conteúdo do cardápio (gerado dinamicamente a partir de js/cardapio-data.js) -->
+        <div class="menu-categories" id="menuContainer"></div>
+
+        <!-- Nota de prévia / expansão do cardápio -->
+        <div class="menu-expansion-note reveal">
+          <div class="menu-expansion-text">
+            <h3>Cardápio em constante evolução</h3>
+            <p>
+              Os itens apresentados são uma prévia das nossas especialidades. Novos sabores, massas e sobremesas estão sendo preparados — consulte disponibilidade e novidades pelo WhatsApp.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20consultar%20outras%20op%C3%A7%C3%B5es%20do%20card%C3%A1pio."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-dark"
+          >
+            Consultar novidades
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section section-cream" id="diferenciais">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="eyebrow">Por que escolher a Dona Lu</span>
+          <h2 class="section-title">O cuidado que faz a diferença</h2>
+          <p class="section-subtitle">
+            Cada etapa do preparo respeita o sabor caseiro e a confiança de quem escolhe nossos pratos.
+          </p>
+        </header>
+
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Ingredientes selecionados</h3>
+            <p class="feature-desc">
+              Escolha criteriosa de cada ingrediente para garantir sabor marcante, textura perfeita e qualidade em todas as porções.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Produtos sem conservantes</h3>
+            <p class="feature-desc">
+              Comida de verdade, livre de conservantes artificiais, preservando o frescor e a leveza da culinária caseira.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v3" />
+                <path d="M5.6 5.6l2.1 2.1" />
+                <path d="M18.4 5.6l-2.1 2.1" />
+                <path d="M4 13h16" />
+                <path d="M6 13a6 6 0 0 0 12 0" />
+                <path d="M8 19h8" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Preparação artesanal</h3>
+            <p class="feature-desc">
+              Massas moldadas e recheios preparados em pequenas produções, com atenção minuciosa ao ponto e ao tempero.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Feito com muito carinho</h3>
+            <p class="feature-desc">
+              Cada receita carrega o cuidado de quem cozinha para a própria família, levando aconchego até a sua mesa.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO E ENCOMENDAS -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <span class="eyebrow eyebrow-gold">Encomendas &amp; Atendimento</span>
+            <h2 class="contact-title">Pronto para levar o sabor da Dona Lu para a sua mesa?</h2>
+            <p class="contact-desc">
+              Faça sua encomenda diretamente pelo WhatsApp. Tire dúvidas sobre tamanhos, sabores disponíveis e reserve seu nhoc com molho para o domingo.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail-box">
+                <span class="detail-label">WhatsApp para encomendas</span>
+                <a
+                  href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="detail-phone"
+                >
+                  (14) 99783-6322
+                </a>
+              </div>
+              <div class="contact-detail-box">
+                <span class="detail-label">Nhoc com Molho</span>
+                <span class="detail-value">Somente aos domingos, sob encomenda</span>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a
+                href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-gold btn-lg"
+              >
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                Fazer encomenda pelo WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-visual">
+            <img
+              src="img/favicon.png"
+              alt="Dona Lu — Da minha casa pra sua mesa"
+              class="contact-logo"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/favicon.png" alt="Logo Dona Lu" width="44" height="44" loading="lazy" />
+        <div>
+          <strong>Dona Lu</strong>
+          <p>Da minha casa pra sua mesa — feito com carinho.</p>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer-contact">
+        <span>WhatsApp:</span>
+        <a
+          href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          (14) 99783-6322
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Dona Lu. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a
+    href="https://wa.me/5514997836322?text=Ol%C3%A1!%20Conheci%20a%20Dona%20Lu%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Fazer encomenda pelo WhatsApp"
+    title="Encomendar pelo WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+    <span class="whatsapp-float-text">Encomendar</span>
+  </a>
+
+  <script src="js/cardapio-data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
