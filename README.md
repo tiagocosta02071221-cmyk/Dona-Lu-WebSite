@@ -1,87 +1,55 @@
-# Beatriz Scarlatti Beauty — Website
+# Dona Lu
 
-Official institutional website developed for **Beatriz Scarlatti Beauty**, a beauty and aesthetics studio.
+> Institutional website for Dona Lu, showcasing homemade food products and making orders easier through WhatsApp.
 
-The project was created to establish a professional digital presence, present the services offered, and provide an easy way for potential clients to get in touch and schedule an appointment.
+## 🌐 Project
 
-## Live Website
+A website developed to showcase Dona Lu's homemade food business, highlighting its products, menu, and ordering information.
 
-**[Visit the Website](https://dona-lu-website.vercel.app/)**
+## ✨ Features
 
-## About the Project
-
-The website was designed with a focus on:
-
-- Professional visual identity
-- Feminine and elegant design
-- Responsive design
-- Clear presentation of services
-- Easy contact and appointment access
-- Mobile-friendly experience
-- Fast and intuitive navigation
-
-## Features
-
-- Responsive layout for desktop, tablet, and mobile
-- Professional landing page
-- Services presentation
+- Brand and product presentation
+- Menu organized by categories
+- Product photography
+- Product descriptions, prices, and sizes
 - About section
-- Gallery section
-- Contact section
-- WhatsApp integration
-- Instagram integration
-- Direct appointment call-to-action
-- Google Maps / location access
+- WhatsApp ordering integration
+- Responsive design for desktop and mobile devices
+- Smooth scrolling navigation
+- User-friendly interface
 
-## Services
+## 🍽️ Products
 
-The website presents the following services:
+The menu includes products such as:
 
-- Makeup
-- Eyelashes
-- Botox
-- Aesthetics
+- Nhoc Dona Lu
+- Nhoc with Sauce
+- Dona Lu Homemade Pies
+- Additional products to be added in the future
 
-## Technologies
+The menu structure allows new products, images, descriptions, and prices to be added easily.
 
-- HTML5
-- CSS3
+## 🛠️ Technologies
+
+- HTML
+- CSS
 - JavaScript
-- Vercel
 
-## Project Structure
+## 📱 Contact
 
-```text
-beatriz-scarlatti-beauty/
-│
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   └── ...
-└── README.md
-```
+Orders are placed directly through WhatsApp:
 
-## Contact
+**+55 (14) 99783-6322**
 
-**Beatriz Scarlatti Beauty**
+## 🎯 Purpose
 
-Rua da Fé, nº 6-3, Loja 1  
-Jardim Urano  
-São José do Rio Preto - SP
+To establish a professional online presence for Dona Lu, showcase the quality of her homemade products, and make it easier for customers to discover products and place orders.
 
-**WhatsApp:** (17) 99186-8273  
-**Instagram:** @beatrizscarlatti.beauty
+## 🚀 Development
 
-## Development
+Developed by **EventHorizon-Web**.
 
-This project is maintained as an independent repository, allowing the website to be developed, updated, and deployed separately from other EventHorizon-Web projects.
-
-## Team
-
-Developed by **Lucas and Tiago** under the **EventHorizon-AI** initiative.
+> Building digital experiences for businesses.
 
 ## Related Projects
 
