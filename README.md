@@ -6,7 +6,7 @@ The project was created to establish a professional digital presence, present th
 
 ## Live Website
 
-**[Visit the Website](dona-lu-website.vercel.app)**
+**[Visit the Website](https://dona-lu-website.vercel.app/)**
 
 ## About the Project
 
