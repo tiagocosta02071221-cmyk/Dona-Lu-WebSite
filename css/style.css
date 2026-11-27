@@ -14,10 +14,11 @@
   --brown-700: #593625;
   --brown-500: #7c5846;
 
-  --cream-50: #fffdf9;
-  --cream-100: #faf6f0;
-  --cream-200: #f3ece1;
-  --cream-300: #e7dbc7;
+  --cream-50: #f6ede0;
+  --cream-100: #ede0cd;
+  --cream-200: #e4d2b9;
+  --cream-300: #d8c0a0;
+  --surface-card: #fbf5ec;
 
   --wine-700: #5e1319;
   --wine-600: #7a1c24;
@@ -28,7 +29,7 @@
   --gold-400: #e0ad56;
 
   --white: #ffffff;
-  --border-subtle: rgba(62, 36, 23, 0.12);
+  --border-subtle: rgba(62, 36, 23, 0.15);
   --shadow-sm: 0 4px 16px rgba(42, 23, 14, 0.06);
   --shadow-md: 0 12px 32px rgba(42, 23, 14, 0.1);
   --shadow-lg: 0 20px 48px rgba(42, 23, 14, 0.14);
@@ -274,7 +275,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(255, 253, 249, 0.94);
+  background-color: rgba(246, 237, 224, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-subtle);
   transition: box-shadow var(--transition);
@@ -441,7 +442,7 @@ button {
 .hero {
   position: relative;
   padding-block: 4rem 5rem;
-  background: linear-gradient(135deg, var(--cream-100) 0%, var(--cream-50) 60%, var(--cream-200) 100%);
+  background: linear-gradient(135deg, #eadac4 0%, #f5ebdd 55%, #e1ccb0 100%);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -619,7 +620,7 @@ button {
 }
 
 .story-placeholder {
-  background-color: var(--white);
+  background-color: var(--surface-card);
   border: 1px dashed rgba(122, 28, 36, 0.3);
   border-left: 3px solid var(--wine-600);
   border-radius: var(--radius-sm);
@@ -744,7 +745,7 @@ button {
 .product-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: var(--surface-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -916,8 +917,9 @@ button {
 }
 
 .feature-card {
-  background-color: var(--white);
+  background-color: var(--surface-card);
   border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--wine-600);
   border-radius: var(--radius-md);
   padding: 1.85rem 1.5rem;
   box-shadow: var(--shadow-sm);
@@ -972,7 +974,8 @@ button {
    CONTATO E ENCOMENDAS
    ========================================================================== */
 .contact-section {
-  background-color: var(--cream-50);
+  background-color: var(--cream-100);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .contact-card {
